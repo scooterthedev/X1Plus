@@ -18,6 +18,7 @@
 .import "./x1plus/Actions.js" as X1PlusActions
 .import "./x1plus/Sensors.js" as X1PlusSensors
 .import "./x1plus/Polar.js" as X1PlusPolar
+.import "./x1plus/IRC.js" as X1PlusIRC
 
 /* Back-end model logic for X1Plus's UI
  *
@@ -75,6 +76,8 @@ X1Plus.Sensors = X1PlusSensors;
 var Sensors = X1PlusSensors;
 X1Plus.Polar = X1PlusPolar;
 var Polar = X1PlusPolar;
+X1Plus.IRC = X1PlusIRC;
+var IRC = X1PlusIRC;
 
 Stats.X1Plus = X1Plus;
 DDS.X1Plus = X1Plus;
@@ -90,6 +93,7 @@ Expansion.X1Plus = X1Plus;
 Actions.X1Plus = X1Plus;
 Sensors.X1Plus = X1Plus;
 Polar.X1Plus = X1Plus;
+IRC.X1Plus = X1Plus;
 
 var _DdsListener = JSDdsListener.DdsListener;
 var _X1PlusNative = JSX1PlusNative.X1PlusNative;
@@ -190,6 +194,7 @@ function awaken(_DeviceManager, _PrintManager, _NetworkManager, _PrintTask, _Net
 	Actions.awaken();
 	Sensors.awaken();
 	Polar.awaken();
+	IRC.awaken();
 	console.log("X1Plus.js is awake");
 }
 
