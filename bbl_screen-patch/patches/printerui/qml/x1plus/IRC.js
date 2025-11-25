@@ -24,11 +24,11 @@ var [_messages, onMessages, _setMessages] = Binding.makeBinding([]);
 var [_status, onStatus, _setStatus] = Binding.makeBinding({'connected': false});
 
 function messages() {
-    return _messages;
+    return _messages();
 }
 
 function status() {
-    return _status;
+    return _status();
 }
 
 function connect(server, port, nick, channel) {
